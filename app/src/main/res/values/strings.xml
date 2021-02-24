@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">FootballManager</string>
+    <string name="tab_text_1">Poradi</string>
+    <string name="tab_text_2">Zapasy</string>
+    <string name="tab_text_3">Oblibeny tym</string>
+    <string-array name="Spinner_items">
+        <item>La Liga</item>
+        <item>BundesLiga</item>
+        <item>Premier League</item>
+        <item>Serie A</item>
+        <item>Ligue 1</item>
+        <item>Eredivise</item>
+        <item>Primeira Liga</item>
+        <item>Serie A (Brazil)</item>
+    </string-array>
+</resources>
+

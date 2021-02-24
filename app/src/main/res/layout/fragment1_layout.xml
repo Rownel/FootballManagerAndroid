@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/tabActive"
+                >
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="15dp"
+                        android:text="Soutež:"
+                        android:textStyle="normal"
+                        android:textSize="16sp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/black"
+                        />
+
+                    <Spinner
+                        android:id="@+id/aSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:entries="@array/Spinner_items"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        />
+
+                </TableRow>
+
+
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_margin="15dp"
+                    >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:backgroundTint="@color/tabColor"
+                        android:id="@+id/btnGetApi"
+                        android:text="Načíst Tabulku" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TableRow
+                    android:id="@+id/TableRowStandings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/TeamStanding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:text="P."
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="3dp" />
+
+
+                    <TextView
+                        android:id="@+id/TeamName"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:text="Název Týmu"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:gravity="center"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/TeamWins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="V"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="5dp" />
+
+                    <TextView
+                        android:id="@+id/TeamLoses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="P"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="6dp"
+                        />
+                    <TextView
+                        android:id="@+id/TeamTies"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="R"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        />
+                    <TextView
+                        android:id="@+id/TeamPoints"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="B."
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/TeamScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Skóre"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/TableStandings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!-- <TableRow
+                     android:id="@+id/TableRowStandings"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     >
+
+                     <TextView
+                         android:id="@+id/TeamStanding"
+                         android:layout_width="wrap_content"
+                         android:layout_height="match_parent"
+                         android:layout_marginLeft="3dp"
+                         android:text="Standing"
+                         android:layout_gravity="center_horizontal"
+                         android:gravity="center_vertical"
+                         android:layout_marginStart="3dp" />
+
+                     <ImageView
+                         android:id="@+id/TeamLogo"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         app:srcCompat="@drawable/logo"
+                         android:layout_marginTop="10dp"
+                         android:layout_marginBottom="10dp"
+                         android:layout_marginRight="7dp"
+                         android:layout_marginLeft="2dp"
+                         android:layout_marginEnd="7dp"
+                         android:layout_marginStart="2dp" />
+
+                     <TextView
+                         android:id="@+id/TeamName"
+                         android:layout_width="85dp"
+                         android:layout_height="match_parent"
+                         android:text="Team Name"
+                         android:textAlignment="center"
+                         android:layout_gravity="start"
+                         android:gravity="center"
+
+                          />
+
+                     <TextView
+                         android:id="@+id/TeamWins"
+                         android:layout_width="wrap_content"
+                         android:layout_height="match_parent"
+                         android:text="W"
+                         android:layout_gravity="start"
+                         android:gravity="center"
+                         android:textAlignment="center"
+                         android:layout_marginLeft="15dp"
+                         android:layout_marginStart="15dp"
+                         />
+
+                     <TextView
+                         android:id="@+id/TeamLoses"
+                         android:layout_width="wrap_content"
+                         android:layout_height="match_parent"
+                         android:text="L"
+                         android:layout_gravity="start"
+                         android:gravity="center"
+                         android:textAlignment="center"
+                         />
+                     <TextView
+                         android:id="@+id/TeamTies"
+                         android:layout_width="wrap_content"
+                         android:layout_height="match_parent"
+                         android:text="T"
+                         android:layout_gravity="start"
+                         android:gravity="center"
+                         android:textAlignment="center"
+                         android:layout_marginLeft="15dp"
+                         android:layout_marginStart="15dp"
+                         />
+                     <TextView
+                         android:id="@+id/TeamPoints"
+                         android:layout_width="wrap_content"
+                         android:layout_height="match_parent"
+                         android:text="Points"
+                         android:layout_gravity="start"
+                         android:gravity="center"
+                         android:textAlignment="center"
+                         />
+                     <TextView
+                         android:id="@+id/TeamScore"
+                         android:layout_width="wrap_content"
+                         android:layout_height="match_parent"
+                         android:text="Score"
+                         android:layout_gravity="start"
+                         android:gravity="center"
+                         android:textAlignment="center"
+                         android:layout_marginLeft="15dp"
+                         android:layout_marginStart="15dp"
+                         />
+
+                 </TableRow>-->
+
+            </TableLayout>
+
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

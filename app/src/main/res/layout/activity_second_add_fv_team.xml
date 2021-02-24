@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/tabColor"
+                />
+
+            <com.miguelcatalan.materialsearchview.MaterialSearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchView"
+                app:searchBackground="@color/tabActive"
+                app:searchSuggestionBackground="@color/tabActive"
+                app:searchCloseIcon="@drawable/ic_action_navigation_close_inverted"
+                app:searchBackIcon="@drawable/ic_action_navigation_arrow_back_inverted"
+                app:searchSuggestionIcon="@drawable/ic_suggestion"
+                >
+
+            </com.miguelcatalan.materialsearchview.MaterialSearchView>
+
+    <View
+        android:id="@+id/cancelView"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center_vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
+    <ListView
+        android:id="@+id/listViewMy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:divider="#006326"
+        android:dividerHeight="1dp"
+        >
+
+    </ListView>
+
+</RelativeLayout>
